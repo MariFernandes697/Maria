@@ -1,1 +1,144 @@
 /* Página Inicial*/
+*{
+    margin: 0;
+    padding: 0;
+
+}
+:root{
+    --cor0:#b2e5f0;
+    --cor1:#02031b;
+    --cor2:#831212;
+    --cor3:#ffcc00;
+ }
+body{
+    background-color:var(--cor1);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.nav-bar{
+    width: 100%;
+    background-color: var(--cor0);
+    padding: 10px;
+    height: 7vh;
+}
+.nav-bar nav{
+    width: 90%;
+    height: 6vh;
+}
+.nav-bar nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+nav ul li{
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: fantasy;
+ 
+
+}
+nav ul li a{
+    color: var(--cor1);
+    text-decoration: none;
+   
+}
+/*Inicio main*/
+section.main {
+    color: var(--cor0);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 40px;
+    height: 90vh; 
+    padding: 0 50px; 
+}
+
+.mundodev img{
+    margin: 40px;
+    width: 500px;
+    height: 500px;
+}
+.mergulheaqui{
+    font-family: sans-serif;
+    font-size: 1.6em;
+}
+span h1{
+    color: #b016bb;
+    letter-spacing: 5px;
+    font-family: fantasy;
+    text-shadow: 30px 0 20px 0 rgba(0,0, 0, 0,5);
+    font-size: 2em;
+}
+button {
+    margin-top: 30px;
+  align-items: center;
+  background-image: linear-gradient(144deg, #b016bb, 50%, var(--cor0));
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+  color: var(--cor1);
+}
+
+button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+@media (max-width: 768px) {
+    section.main {
+        flex-direction: column; 
+        text-align: center;     
+    }
+
+    .mergulheaqui {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 20px;
+    }
+
+    button {
+        margin: 20px auto; /* centraliza sem quebrar estilo */
+        font-size: 20px;   /* deixa proporcional na tela menor */
+        padding: 9px;
+    }
+
+    button span {
+        padding: 5px 24px; /* mantém o estilo do botão intacto */
+    }
+}
